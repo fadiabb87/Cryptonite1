@@ -32,7 +32,8 @@ if (localStorage.checkedCoinsSymboles ) {
       }
       // console.log(responseData);
       coinsArry = responseData;
-      // console.log(coinsArry);
+      console.log(coinsArry);
+      console.log(checkedCoinsSymboles);
       let output ="";
       
       $.each(coinsArry, (index, coin)=>{
@@ -587,5 +588,47 @@ Phone: 0504418777
 </div>
 `
 $(`#coinsCards`).html(output);
+
+}
+
+//show favs only
+function showFavsOnly()
+{
+let output="a";
+for (let i in checkedCoinsSymboles) {
+
+  let index = coinsArry.findIndex(obj => obj.symbol == checkedCoinsSymboles[i]);
+    
+  let symbol = coinsArry[index].symbol;
+     output += 
+     `<div class="card border-primary mb-3 coinCard" style="max-width: 20rem;">
+      <div class="card-header">   <h5>Coin: ${symbol}</h5></div>
+      <div class="card-body">
+      <h4 class="card-title">
+      <span class="form-group">
+      <div class="custom-control custom-switch">
+      <input type="checkbox" class="custom-control-input" id="customSwitch${index}" name="${symbol}" onchange="favButtonClicked(this)" checked="">
+      <label class="custom-control-label" for="customSwitch${index}" ><h5>Add coin to Fav</h5></label>
+      </div>
+      </span>
+      <br><br>
+      <button type="button" class="btn btn-outline-primary"  id="button${index}" onclick="buttonClicked(${index})"><span id="clickText${index}">more info</span></button>
+       <br><br>
+       <div class="spinner-border" style="width: 5rem; height: 5rem; display: none;" role="status" id="progSpin${index}"></div>
+       </h4>
+       <p class="card-text" style="display:none;" id="coinText${index}"></p>
+       </div>
+       </div> 
+      `;
+}
+console.log(output);
+  if (output!="a")
+  {
+    $("#coinsCards").html(output);
+  }
+  else
+  {
+    alert("No Fav Coins checked")
+  }
 
 }
