@@ -1,0 +1,56 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font: 400 15px/1.8 "Lato", sans-serif;
+    color: #777;
+  }
+
+#container{
+     /* The image used */
+  background-image: url("bgmainpix.jpg");
+
+  /* Set a specific height */
+  min-height: 550px; 
+  width: auto  ;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* #coinsCards{
+
+    margin-left:10%;
+} */
+
+.coinCard{
+    margin-left: 5%;
+    margin-top: 10px;
+    min-width: 20rem;
+    min-height: 20rem;
+    
+}
+
+.modal-backdrop
+{
+    opacity:0.5 !important;
+}
+
+#aboutpage
+{
+    margin-left: 30%;
+}
+
+.navbar-collapse.collapse.in {
+    display: block!important;
+  }
+  
+  /* media query */
+@media only screen and (max-width: 600px) {
+    #aboutpage
+    {
+        margin-left: 5%;
+    }
+  }

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome</title>
+
+     <link rel="stylesheet" href="bootstrap.min.css">
+     <link rel="stylesheet" href="style.css">
+     
+    
+    
+   
+    
+    
+
+</head>
+<body onload="loadAllCoins()">
+    
+ 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<a class="navbar-brand" href="#">Cryptonite</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+ <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarColor03">
+ <ul class="navbar-nav mr-auto">
+   <li class="nav-item active">
+     <a href="#" class="nav-link" onclick="loadAllCoins()">Home</a>
+   </li>
+   <li class="nav-item">
+     <a href="#" class="nav-link" onclick="getCoinsForLiveReports()">Live Reports</a>
+   </li>
+   <li class="nav-item">
+     <a href="#" class="nav-link" href="#" onclick="aboutPage()">About</a>
+   </li>
+ </ul>
+
+ 
+ 
+
+ <form class="form-inline my-2 my-lg-0">
+   <input class="form-control mr-sm-2" type="text" placeholder="Search" id="searchTXT">
+   <button class="btn btn-secondary my-2 my-sm-0" type="submit" id="searchBTN" onclick="searchBtnClicked()">Search</button>
+
+   <button class="btn btn-secondary my-2 my-sm-0" type="submit" id="clearBTN" onclick="clearAll()">Clear All</button>
+   
+   
+ </form>
+ 
+
+</nav>
+ 
+<div class="modal" id="coinsAlert">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" onclick="saveCoinsChanges()">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+      
+      
+
+<div class="row" id="container"></div>
+
+<div class="row" id="coinsCards"></div>
+
+
+
+
+
+
+
+
+
+   
+  
+
+
+
+
+  
+
+
+
+
+
+   
+<script src="jquery.js"></script>
+<script src="scripts.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
+
