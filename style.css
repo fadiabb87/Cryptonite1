@@ -53,4 +53,9 @@ body, html {
     {
         margin-left: 5%;
     }
+    
+     #coinsAlert
+    {
+        width:90%
+    }
   }
